@@ -74,6 +74,7 @@ func main() {
 		panic(err)
 	}
 
+	fmt.Println("Processing HCL tree:")
 	processNode(tree)
 
 	var demo Demo
@@ -81,7 +82,7 @@ func main() {
 		panic(err)
 	}
 
-	fmt.Printf("Hello, %s with %q.\n", demo.Name, demo.Params.URL)
+	fmt.Printf("\nHello, %s with %q.\n", demo.Name, demo.Params.URL)
 	for i, pem := range demo.Params.TLS.PEM {
 		fmt.Printf("PEM[%d] = %q\n", i+1, pem)
 	}
